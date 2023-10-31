@@ -3,6 +3,8 @@
 <h2>Table of Contents</h2>
 <ul>
    <li><a href="#01-vanilla-js">01-vanilla-js</li>
+   <li><a href="#02-react-hello-world">02-react-hello-world</li>
+   <li><a href="#03-react-vs-vanilla-js">03-react-vs-vanilla-js</li>
 </ul>
 
 <div>
