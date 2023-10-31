@@ -1,8 +1,12 @@
 <h1>This repository is about React which I`m learning.</h1>
-</br>
-<h2>01-vanilla-js</h2>(/01-vanilla-js)
+
+<h2>Table of Contents</h2>
+<ul>
+   <li><a href="#01-vanilla-js">01-vanilla-js</li>
+</ul>
 
 <div>
+   </h2>01-vanilla-js.</h2>
    <p>Before learning React a teacher showed how to manipulate DOM API with vanilla JS.</p>
    <details>
       <summary>
