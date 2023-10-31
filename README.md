@@ -25,6 +25,17 @@
 
 <div>
    <h2>02-react-hello-world</h2>
+   <p>At this time I tried to work with React by using CDN links</p>
+   <details>
+      <summary>
+         <span>Detailed</span>
+      </summary>
+      <ul>
+         <li>we created a simple index.html document</li>
+         <li>added CDN links to React and ReactDOM</li>
+         <li>created one React component and rendered it to a web page</li>
+      </ul>
+   </details>   
 </div>
 
 <div>
