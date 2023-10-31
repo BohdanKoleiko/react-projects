@@ -6,7 +6,7 @@
 </ul>
 
 <div>
-   </h2>01-vanilla-js.</h2>
+   <h2>01-vanilla-js.</h2>
    <p>Before learning React a teacher showed how to manipulate DOM API with vanilla JS.</p>
    <details>
       <summary>
