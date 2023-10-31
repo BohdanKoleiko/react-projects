@@ -1,4 +1,5 @@
-<h1>This repository is about React which I`m learning.</h1>
+<h1>About</h1>
+This repository shows projects that I worked with while learning React.
 
 <h2>Table of Contents</h2>
 <ul>
