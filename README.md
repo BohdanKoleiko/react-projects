@@ -9,7 +9,7 @@
 
 <div>
    <h2>01-vanilla-js.</h2>
-   <p>Before learning React a teacher showed how to manipulate DOM API with vanilla JS.</p>
+   <p>Before learning React a teacher showed me how to manipulate DOM API with vanilla JS.</p>
    <details>
       <summary>
          <span>Detailed</span>
@@ -21,4 +21,12 @@
          <li>added some CSS</li>
       </ul>
    </details>   
+</div>
+
+<div>
+   <h2>02-react-hello-world</h2>
+</div>
+
+<div>
+   <h2>03-react-vs-vanilla-js</h2>
 </div>
