@@ -3,6 +3,8 @@ import "./App.css";
 import Button from "./components/Button";
 import Counter from "./components/Counter";
 
+const txtArray = ["Click", "Click on me!", "Click another one", "Press me"];
+
 function App() {
    const [countNum, setCountNum] = useState(0);
 
@@ -14,10 +16,9 @@ function App() {
    return (
       <div className="App">
          <Counter countNum={countNum} />
-         <Button onClick={incrementCountNum} />
-         <Button onClick={incrementCountNum} />
-         <Button onClick={incrementCountNum} />
-         <Button onClick={incrementCountNum} />
+         {txtArray.map((txt, i) => (
+            <Button onClick={incrementCountNum} btnText={txt} key={i} />
+         ))}
       </div>
    );
 }
