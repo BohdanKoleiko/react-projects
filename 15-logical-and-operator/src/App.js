@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button";
 import Counter from "./components/Counter";
+import ResetButton from "./components/ResetButton";
 
 function App() {
    const [countNum, setCountNum] = useState(0);
-   const buttonStyle = { backgroundColor: "lightgreen" };
 
    // краще передати incrementCountNum() функцію кнопці, ніж передавати setCountNum() разом з countNum, тому що компоненту Button не потрібно знати яке число на разі є, ця інформація для Button буде ізбиточна.
    const incrementCountNum = () => {
@@ -22,13 +22,7 @@ function App() {
          <Button onClick={incrementCountNum} />
          <Button onClick={incrementCountNum} />
          <Button onClick={incrementCountNum} />
-         {!!countNum && (
-            <div>
-               <button style={buttonStyle} onClick={resetCount}>
-                  Reset
-               </button>
-            </div>
-         )}
+         {!!countNum && <ResetButton resetCountNum={resetCount} />}
       </div>
    );
 }
