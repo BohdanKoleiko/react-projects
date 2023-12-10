@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.persons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 10px;
+}
+
+.person {
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+  h4 {
+    overflow: hidden;
+    white-space: nowrap '- не обо`язковий аргумент. Можна використати для th тегів щоб текст в них неврапився';
+    text-overflow: ellipsis;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
