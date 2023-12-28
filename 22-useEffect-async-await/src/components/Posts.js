@@ -7,29 +7,52 @@ import { useState, useEffect } from "react";
 const URL = "https://jsonplaceholder.typicode.com/posts";
 
 const Posts = function () {
-   const [posts, setPosts] = useState(null);
-   const [error, setError] = useState("");
-   const [isLoading, setIsLoading] = useState(false);
+   //const [posts, setPosts] = useState([]);
+   //const [error, setError] = useState("");
+   //const [isLoading, setIsLoading] = useState(false);
+   const [data, setData] = useState({ posts: [], error: "", isLoading: true });
+
+   function handler(name, value) {
+      setData((prevState) => ({ ...prevState, [name]: value }));
+   }
 
    useEffect(() => {
-      fetch(URL)
-         .then((res) => res.json())
-         .then((json) => setPosts(json))
-         .catch((error) => setError(error.message))
-         .finally(() => setTimeout(() => setIsLoading(true), 5000));
+      console.log("useEffect is running");
+      (async () => {
+         try {
+            const res = await fetch(URL);
+            const posts = await res.json();
+            //setPosts(posts);
+            handler("posts", posts);
+         } catch (error) {
+            //setError(error.message);
+            handler("error", error.message);
+         }
+
+         //setIsLoading(true);
+         handler("isLoading", false);
+      })();
    }, []);
 
-   if (error) {
-      return <h1>Error: {error}</h1>;
+   //useEffect(() => {
+   //   fetch(URL)
+   //      .then((res) => res.json())
+   //      .then((json) => setPosts(json))
+   //      .catch((error) => setError(error.message))
+   //      .finally(() => setIsLoading(true));
+   //}, []);
+
+   if (data.error) {
+      return <h1>Error: {data.error}</h1>;
    }
 
    return (
       <div className="posts">
-         {isLoading ? (
-            posts.map((post) => <Post key={post.id} {...post} />)
+         {!data.isLoading ? (
+            data.posts.map((post) => <Post key={post.id} {...post} />)
          ) : (
             <figure className="loading">
-               <img src={loadImg} alt="loading" />
+               <img src={loadImg ? loadImg : ""} alt="loading" />
             </figure>
          )}
       </div>
