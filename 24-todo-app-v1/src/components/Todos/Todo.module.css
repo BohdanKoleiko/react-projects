@@ -1,0 +1,23 @@
+.listItem {
+  background-color: white;
+  padding: 12px 20px;
+  text-align: left;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.listItem figure {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  color: teal;
+}
+
+.listItem span {
+  font-size: 1.5rem;
+}
