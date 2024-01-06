@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./TodoForm.module.css";
+import Button from "../UI/Button";
 
 const TodoForm = function ({ setTodos }) {
    const [text, setText] = useState("");
@@ -25,9 +26,9 @@ const TodoForm = function ({ setTodos }) {
                className={styles.input}
                onChange={(e) => setText(e.target.value)}
             />
-            <button type="submit" className={styles.button}>
+            <Button type="submit" className={styles.button} title={"Submit"}>
                Submit
-            </button>
+            </Button>
          </form>
       </>
    );
