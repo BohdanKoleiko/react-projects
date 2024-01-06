@@ -1,0 +1,65 @@
+.todo {
+  background-color: white;
+  padding: 12px 20px;
+  text-align: left;
+  border-radius: 3px;
+  border: 2px solid transparent;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.todo:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.todoImg {
+  font-size: 1.6rem;
+}
+
+.todoImg {
+  margin-right: 10px;
+  color: teal;
+}
+
+.todo span {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  flex: 1 1 auto;
+}
+
+.completedTodo {
+  background-color: unset;
+  border-color: gray;
+  color: gray;
+}
+
+.todo.completedTodo .todoImg,
+.todo.completedTodo .removeTodo,
+.todo.completedTodo .checkTodo {
+  color: gray
+}
+
+.removeTodo,
+.checkTodo {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.removeTodo {
+  margin-right: 10px;
+}
+
+.removeTodo:hover,
+.checkTodo:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.removeTodo:hover {
+  color: rgb(211, 7, 7);
+}
+
+.checkTodo:hover {
+  color: green;
+}
