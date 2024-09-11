@@ -3,28 +3,28 @@ import { useState } from "react";
 const Login = function () {
    const [data, setData] = useState({ username: "", password: "" });
 
-   const hundlerFormSubmit = function (event) {
+   const handlerFormSubmit = function (event) {
       event.preventDefault();
 
       console.log(data);
       alert(JSON.stringify(data));
    };
 
-   const hundleInputChange = function (text, name) {
+   const handleInputChange = function (text, name) {
       setData({ ...data, [name]: text });
    };
 
    return (
       <>
          <h1>Login Form</h1>
-         <form onSubmit={hundlerFormSubmit}>
+         <form onSubmit={handlerFormSubmit}>
             <label>
                Username:
                <input
                   type="text"
                   value={data.username}
                   onChange={(e) => {
-                     hundleInputChange(e.target.value, "username");
+                     handleInputChange(e.target.value, "username");
                   }}
                />
             </label>
@@ -34,7 +34,7 @@ const Login = function () {
                   type="password"
                   value={data.password}
                   onChange={(e) => {
-                     hundleInputChange(e.target.value, "password");
+                     handleInputChange(e.target.value, "password");
                   }}
                />
             </label>
