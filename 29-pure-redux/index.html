@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <style>
+         html {
+            background-color: #853d3d;
+            color: white;
+         }
+
+         .buttons {
+            display: flex;
+            column-gap: 20px;
+         }
+
+         button {
+            color: white;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(145deg, #8e4141, #783737);
+            box-shadow: 8px 8px 16px #4d2323, -8px -8px 16px #bd5757;
+            padding: 14px;
+            transition: all 0.2s ease-in-out;
+         }
+
+         button:active {
+            background: linear-gradient(145deg, #783737, #8e4141);
+            box-shadow: 8px 8px 16px #4d2323, -8px -8px 16px #bd5757;
+         }
+      </style>
+      <title>Pure Redux</title>
+   </head>
+   <body>
+      <h1>Pure Redux</h1>
+
+      <div class="buttons">
+         <button id="addTime">Add current time</button>
+         <button id="cleanTimesBtn">Clean all times</button>
+      </div>
+
+      <ul id="timeList"></ul>
+
+      <script type="module" src="./index.js"></script>
+   </body>
+</html>
