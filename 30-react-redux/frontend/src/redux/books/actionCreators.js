@@ -11,3 +11,15 @@ export const addBook = (newBook) => {
       payload: newBook,
    };
 };
+
+/**
+ *
+ * @param {object} book - book that should be removed
+ * @returns {{type: string, payload: object}}
+ */
+export const deleteBook = (bookID) => {
+   return {
+      type: actionTypes.DELETE_BOOK,
+      payload: bookID,
+   };
+};
