@@ -18,6 +18,7 @@ const BookForm = () => {
             title,
             author,
             id: uuidv4(),
+            isFavorite: false,
          };
          dispatch(addBook(book));
          setTitle("");
@@ -30,6 +31,7 @@ const BookForm = () => {
       const pickRandomBook = {
          ...booksData[rundomNumber],
          id: uuidv4(),
+         isFavorite: false,
       };
       dispatch(addBook(pickRandomBook));
    };
