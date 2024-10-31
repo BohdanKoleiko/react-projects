@@ -14,7 +14,7 @@ export const addBook = (newBook) => {
 
 /**
  *
- * @param {object} book - book that should be removed
+ * @param {object} bookID - book that should be removed
  * @returns {{type: string, payload: object}}
  */
 export const deleteBook = (bookID) => {
@@ -24,6 +24,11 @@ export const deleteBook = (bookID) => {
    };
 };
 
+/**
+ *
+ * @param {number} bookID - book's id to be marked as favorite
+ * @returns {{type: string, payload: number}}
+ */
 export const toggleFavorite = (bookID) => {
    return {
       type: actionTypes.TOGGLE_FAVORITE,
