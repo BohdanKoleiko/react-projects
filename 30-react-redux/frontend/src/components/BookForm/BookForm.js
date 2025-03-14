@@ -15,7 +15,7 @@ const BookForm = () => {
       e.preventDefault();
 
       if (title && author) {
-         dispatch(addBook(createBookWithID({ title, author })));
+         dispatch(addBook(createBookWithID({ title, author }, "manual")));
          setTitle("");
          setAuthor("");
       }
@@ -23,14 +23,14 @@ const BookForm = () => {
 
    const handleAddRandomBook = () => {
       const rundomIndex = Math.floor(Math.random() * booksData.length);
-      dispatch(addBook(createBookWithID(booksData[rundomIndex])));
+      dispatch(addBook(createBookWithID(booksData[rundomIndex], "random")));
    };
 
    const handleAddRandomBookViaAPI = async () => {
       try {
-         const res = await axios.get("http://localhost:5000/random-book");
+         const res = await axios.get("http://localhost:4000/random-book");
          if (res?.data?.title && res?.data?.author) {
-            dispatch(addBook(createBookWithID(res.data)));
+            dispatch(addBook(createBookWithID(res.data, "API")));
          }
       } catch (error) {
          console.log("Error fetching random book", error);
