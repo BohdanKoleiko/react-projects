@@ -16,8 +16,6 @@ const Filter = () => {
    const authorFilter = useSelector(selectAuthorNameFilter);
    const onlyFavoriteFilter = useSelector(selectOnlyFavoriteFilter);
 
-   console.log(authorFilter);
-
    const handleTitleFilterChange = (e) => {
       dispatch(setTitleFilter(e.target.value));
    };
