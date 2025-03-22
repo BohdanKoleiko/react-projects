@@ -5,14 +5,8 @@ import createBookWithID from "../../utils/createBookWithID";
 const initialState = [];
 
 export const fetchBook = createAsyncThunk("books/fetchBook", async () => {
-   try {
-      const res = await axios.get("http://localhost:4000/random-book");
-      if (res?.data?.title && res?.data?.author) {
-         return res.data;
-      }
-   } catch (error) {
-      console.log("Error fetching random book", error);
-   }
+   const res = await axios.get("http://localhost:5000/random-book");
+   return res.data;
 });
 
 const booksSlice = createSlice({
