@@ -8,8 +8,10 @@ const Error = () => {
    const dispatch = useDispatch();
 
    useEffect(() => {
-      if (errorMsg) {
-         toast.info(errorMsg);
+      const errorType = errorMsg.type ? errorMsg.type : "info";
+
+      if (errorMsg.type && errorMsg.msg) {
+         toast[errorType](errorMsg.msg);
          dispatch(clearError());
       }
    }, [errorMsg, dispatch]);
